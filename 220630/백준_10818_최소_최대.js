@@ -22,3 +22,4 @@ const arrayA = splitInput[0];
 const arrayB = splitInput[1].split(" ").map(Number); // 스페이스바 기준으로 1개씩 자름
 arrayB.sort((a, b) => a - b);
 console.log(arrayB[0], arrayB[arrayA - 1]);
+기;
