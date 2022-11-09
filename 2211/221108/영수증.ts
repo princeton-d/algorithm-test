@@ -25,3 +25,18 @@
 5000 8
 출력2: No
 */
+
+const input = `250000
+4
+20000 5
+30000 2
+10000 6
+5000 8`;
+const [price, ea, ...item]: string[] = input.split(`\n`);
+let result = 0;
+for (let i = 0; i < Number(ea); i++) {
+  for (let j = 0; j < item[i].split(' ').map(Number)[1]; j++) {
+    result += item[i].split(' ').map(Number)[0];
+  }
+}
+Number(price) === result ? console.log('Yes') : console.log('No');
