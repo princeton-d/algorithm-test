@@ -17,7 +17,7 @@ N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작
 출력5: 12
 */
 
-const input = `26`;
+const input = `71`;
 let [x, y]: number[] =
   input.length !== 1
     ? input.split('').map(Number)
@@ -33,7 +33,6 @@ do {
     String(result).length !== 1
       ? String(result).split('').map(Number)
       : ('0' + result).split('').map(Number);
-  console.log(typeof (x + y));
   i++;
-} while (result !== x + y);
+} while (result !== Number(input));
 console.log(i);
