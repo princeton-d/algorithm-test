@@ -14,7 +14,6 @@ for (let i = 1; i <= 10000; i++) {
   arr[d(i)] = d(i)
 }
 
-// arr.map(e => e !== undefined ? console.log(e) : '')
 for (let j = 1; j <= 10000; j++) {
   arr[j] === undefined ? console.log(j) : ''
 }
