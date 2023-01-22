@@ -8,14 +8,14 @@ let t = 0
 
 while (I > 0) {
   if (I >= 300) {
-    I -= 300
-    f++
+    f = Math.floor(I / 300)
+    I = I % 300
   } else if (I < 600 && I >= 60) {
-    I -= 60
-    o++
+    o = Math.floor(I / 60)
+    I = I % 60
   } else if (I < 60 && I >= 10) {
-    I -= 10
-    t++
+    t = Math.floor(I / 10)
+    I = I % 10
   } else {
     break
   }
