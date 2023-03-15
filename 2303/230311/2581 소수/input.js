@@ -11,32 +11,32 @@ for (let i = M; i <= N; i++) {
     continue;
   }
 
-  // for (let j = 2; j <= i; j++) {
-  //   if (i % j === 0) {
-  //     break;
-  //   }
+  for (let j = 2; j <= i; j++) {
+    if (i % j === 0) {
+      break;
+    }
 
-  //   if (j * 2 > i) {
-  //     primeNumber.push(i);
-  //     result += i
-  //     break;
-  //   }
-  // }
-
-  let num = 2;
-  while (i >= num) {
-    if (num * 2 > i) {
+    if (j * 2 > i) {
       primeNumber.push(i);
-      result += i;
+      result += i
       break;
     }
-
-    if (i % num === 0) {
-      break;
-    }
-
-    num++;
   }
+
+  // let num = 2;
+  // while (i >= num) {
+  //   if (num * 2 > i) {
+  //     primeNumber.push(i);
+  //     result += i;
+  //     break;
+  //   }
+
+  //   if (i % num === 0) {
+  //     break;
+  //   }
+
+  //   num++;
+  // }
 }
 
 if (primeNumber.length === 0) {
