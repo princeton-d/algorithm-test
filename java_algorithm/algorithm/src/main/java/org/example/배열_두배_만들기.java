@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class 배열_두배_만들기 {
     public int[] solution(int[] numbers) {
         int[] answer = new int[numbers.length];
@@ -9,5 +11,11 @@ public class 배열_두배_만들기 {
         }
         
         return answer;
+    }
+    
+    public int[] solution2(int[] numbers) {
+        return Arrays.stream(numbers)
+            .map(number -> number * 2)
+            .toArray();
     }
 }
