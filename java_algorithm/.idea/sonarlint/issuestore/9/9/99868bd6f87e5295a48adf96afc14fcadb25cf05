@@ -1,0 +1,7 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ๅต þÿÿÿÿ8งาก๕0
+€
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "answer".(ýฅภ๙ÿÿÿÿ8งาก๕0
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(รธ๙8จาก๕0
+|
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(€…“8ญาก๕0
