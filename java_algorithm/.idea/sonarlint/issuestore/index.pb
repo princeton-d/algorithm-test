@@ -51,3 +51,9 @@ o
 ?algorithm/src/main/java/org/example/_1_자릿수_더하기.java,7/d/7d15664a79e6d1e7b9a15c0cb1e2e0bcfeac0832
 l
 <algorithm/src/main/java/org/example/_1_평균_구하기.java,b/e/bec829068ead196aa5abc781475cd975464a6e98
+]
+-algorithm/src/main/java/org/example/Main.java,d/8/d855e12240dc9b2dd5dc958f35d07bc7acd9af99
+�
+Salgorithm/src/main/java/org/example/_1_x만큼_간격이_있는_n개의_숫자.java,4/a/4afb8a40634451089312ce17db5d715fed49ad3f
+
+Oalgorithm/src/main/java/org/example/_1_나머지가_1이_되는_수_찾기.java,6/7/67d32c59518ce051a71e63933f35d94a3b4aef86
