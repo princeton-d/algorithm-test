@@ -2,7 +2,7 @@ package org.example;
 
 import java.io.*;
 
-public class Main {
+public class 백준_2839_설탕_배달 {
     public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("src/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
