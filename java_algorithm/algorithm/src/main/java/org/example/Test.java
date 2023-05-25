@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        int dot = 24;
+        int dot = 48;
         List<int[]> list = new ArrayList<>();
 
         for (int i = 2; i <= Math.sqrt(dot); i++) {
