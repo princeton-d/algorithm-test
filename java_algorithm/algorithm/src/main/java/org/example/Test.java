@@ -1,22 +1,13 @@
 package org.example;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Test {
     public static void main(String[] args) {
-        int dot = 48;
-        List<int[]> list = new ArrayList<>();
-
-        for (int i = 2; i <= Math.sqrt(dot); i++) {
-            if (dot % i == 0) {
-                int x = i;
-                int y = dot / i;
-                list.add(x >= y ? new int[]{x, y} : new int[]{y, x});
-            }
-        }
-
-        for (int[] ints : list) {
-            System.out.println(Arrays.toString(ints));
-        }
+        int[] arr = new int[]{1, 4, 6, 4, 2, 74, 25, 21, 13};
+        List<Integer> lists = Arrays.stream(arr).sorted().boxed().collect(Collectors.toList());
+        LinkedList<Integer> list = new LinkedList<>(lists);
+        System.out.println(list.getLast());
     }
 }
