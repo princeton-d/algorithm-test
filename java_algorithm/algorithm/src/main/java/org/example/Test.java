@@ -5,33 +5,57 @@ import java.util.stream.Collectors;
 
 public class Test {
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 4, 6, 4, 2, 74, 25, 21, 13};
-        List<Integer> lists = Arrays.stream(arr).sorted().boxed().collect(Collectors.toList());
-        LinkedList<Integer> list = new LinkedList<>(lists);
-        System.out.println(list.getLast());
+        char[] arr = new char[]{'(', '(', '}'};
+
     }
 
-    public int solution(int k, int[] tangerine) {
+    public static int solution(String s) {
         int answer = 0;
         int count = 0;
-        Map<Integer, Integer> map = new HashMap<>();
+        int maxCount = s.length() - 1;
+        Stack<Character> stack = new Stack<>();
 
-        for (int item : tangerine) {
-            map.put(item, map.getOrDefault(item, 0) + 1);
+        if (s.length() % 2 == 1) {
+            return 0;
         }
 
-        List<Integer> list = new ArrayList<>(map.values());
-        Collections.sort(list);
+        for (int i = 0; i <= maxCount; i++) {
+            while (count != maxCount) {
+                int value = i;
+                char input = s.charAt(value);
 
-        for (int i = list.size() - 1; i >= 0; i--) {
-            answer += list.get(i);
-            count++;
+                if (input == '(' || input == '{' || input == '[') {
+                    stack.push(input);
+                    value++;
+                    count++;
+                }
 
-            if (answer >= k) {
-                return count;
+                if (input == ')' || input == '}' || input == ']') {
+                    if (stack.empty() || stack.peek() != input) {
+                        stack.push('n');
+                        count = 0;
+                        break;
+                    }
+
+                    if (stack.peek() == input) {
+                        stack.pop();
+                        value++;
+                        count++;
+                    }
+                }
+
+                if (value == maxCount) {
+                    value = 0;
+                    count++;
+                }
             }
-        }
 
-        return count;
+            if (stack.empty()) {
+                answer++;
+            }
+
+            stack.clear();
+        }
+        return answer;
     }
 }
