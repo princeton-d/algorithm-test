@@ -1,19 +1,13 @@
 package org.example;
 
-import java.util.*;
-import java.util.stream.Collectors;
-
 public class Test {
     public static void main(String[] args) {
-        System.out.println(dfs(40));
-    }
+        int[] intArr = new int[26];
+        char ch = 'a';
 
-    public static int dfs(int number) {
-        if (number <= 2) {
-            return 1;
+        for (int i = 0; i < intArr.length; i++) {
+
         }
-
-        return dfs(number - 1) + dfs(number - 2);
     }
 
 }
