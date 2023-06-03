@@ -8,6 +8,7 @@ public class Test {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
 
-        list.stream().mapToInt(Integer::intValue).toArray()
+        list.stream().mapToInt(Integer::intValue).toArray();
+        System.out.println(list);
     }
 }
