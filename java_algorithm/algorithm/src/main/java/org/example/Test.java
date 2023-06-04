@@ -9,6 +9,5 @@ public class Test {
         List<Integer> list = new ArrayList<>();
 
         list.stream().mapToInt(Integer::intValue).toArray();
-        System.out.println(list);
     }
 }
