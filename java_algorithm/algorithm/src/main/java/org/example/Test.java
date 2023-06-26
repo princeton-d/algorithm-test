@@ -6,8 +6,15 @@ import java.util.stream.Stream;
 
 public class Test {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
+        int n = 45;
 
-        list.stream().mapToInt(Integer::intValue).toArray();
+        while (true) {
+            System.out.println(n % 3);
+            System.out.println(n / 3);
+
+            if (n == 1 || n == 0) {
+                break;
+            }
+        }
     }
 }
