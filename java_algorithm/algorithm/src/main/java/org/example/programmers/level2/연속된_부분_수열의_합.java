@@ -58,4 +58,44 @@ public class 연속된_부분_수열의_합 {
 
         return answer;
     }
+
+    public int[] solution2(int[] sequence, int k) {
+        int startPoint = sequence.length - 1;
+        int endPoint = sequence.length - 1;
+        int sum = 0;
+
+        int[] result = new int[]{startPoint, endPoint};
+        int resultLength = startPoint;
+
+        while(startPoint >= 0) {
+            sum += sequence[startPoint];
+
+            if (sum == k && resultLength >= endPoint - startPoint) {
+                resultLength = endPoint - startPoint;
+                result[0] = startPoint;
+                result[1] = endPoint;
+                startPoint--;
+
+                continue;
+            }
+
+            if (sum < k) {
+                startPoint--;
+
+                continue;
+            }
+
+            if (sum > k) {
+                sum -= sequence[startPoint];
+                sum -= sequence[endPoint];
+                endPoint--;
+
+                continue;
+            }
+
+            startPoint--;
+        }
+
+        return result;
+    }
 }
