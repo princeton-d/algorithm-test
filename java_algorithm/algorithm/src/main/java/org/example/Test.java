@@ -6,26 +6,46 @@ public class Test {
     public static void main(String[] args) {
         int k = 80;
         int[][] dungeons = {{80, 20}, {50, 40}, {30, 10}};
-        System.out.println(solution(k, dungeons));
+        System.out.println(solution(new int[]{1, 2, 3, 4, 5}, 7));
     }
 
-    public static boolean[] visited;
-    public static int answer = -1;
+    public static int[] solution(int[] sequence, int k) {
+        int startPoint = sequence.length - 1;
+        int endPoint = sequence.length - 1;
+        int sum = sequence[startPoint];
 
-    public static int solution(int k, int[][] dungeons) {
-        visited = new boolean[dungeons.length];
-        dfs(k, dungeons, 0);
-        return answer;
-    }
+        int[] result = new int[]{startPoint, endPoint};
+        int resultLength = startPoint;
 
-    public static void dfs(int k, int[][] dungeons, int count){
-        answer = Math.max(answer, count);
-        for(int i=0; i<dungeons.length; i++){
-            if(visited[i] == false && dungeons[i][0] <= k){
-                visited[i] = true;
-                dfs(k - dungeons[i][1], dungeons, count+1);
-                visited[i] = false;
+        while(startPoint >= 0) {
+            if (sum == k && resultLength >= endPoint - startPoint) {
+                resultLength =
+                        result[0] = startPoint;
+                result[1] = endPoint;
+                startPoint--;
+                sum += sequence[startPoint];
+
+                continue;
             }
+
+            if (sum < k) {
+                startPoint--;
+                sum += sequence[startPoint];
+
+                continue;
+            }
+
+            if (sum > k) {
+                sum -= sequence[endPoint];
+                endPoint--;
+
+                continue;
+            }
+
+            startPoint--;
+            sum += sequence[startPoint];
         }
+
+        return result;
     }
 }
