@@ -48,23 +48,6 @@ public class Main {
 
         return result;
 
-//        Set<Long> area = new HashSet<>();
-//
-//        for (int[] rect : rectangles) {
-//            long x1 = rect[0];
-//            long y1 = rect[1];
-//            long x2 = rect[2];
-//            long y2 = rect[3];
-//
-//            for (long x = x1; x < x2; x++) {
-//                for (long y = y1; y < y2; y++) {
-//                    area.add(x * 1000000000L + y);
-//                }
-//            }
-//        }
-//
-//        return area.size();
-
     }
 
     public static void main(String[] args) {
