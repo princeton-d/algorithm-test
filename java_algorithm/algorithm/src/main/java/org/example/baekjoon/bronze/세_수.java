@@ -35,7 +35,6 @@ public class 세_수 {
         bw.write(sb.toString());
         bw.flush();
         bw.close();
-
     }
 
 }
