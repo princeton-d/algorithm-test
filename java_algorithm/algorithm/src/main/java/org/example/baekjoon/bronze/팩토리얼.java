@@ -19,7 +19,6 @@ public class 팩토리얼 {
 
         bw.write(sb.toString());
         bw.flush();
-        bw.close();
 
     }
 
