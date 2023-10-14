@@ -17,7 +17,6 @@ public class AB2 {
 
         bw.write(sb.toString());
         bw.flush();
-        bw.close();
 
     }
 
